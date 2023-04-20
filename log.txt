@@ -1,0 +1,16 @@
+2023-04-20:03:55:34,706 ERROR    [C:\Program Files\Python310\lib\asyncio\base_events.py:1729] Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\koshakqqq\Documents\tg_task\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ValueError('too many values to unpack (expected 2)')>
+Traceback (most recent call last):
+  File "C:\Users\koshakqqq\Documents\tg_task\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\koshakqqq\Documents\tg_task\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\koshakqqq\Documents\tg_task\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\koshakqqq\Documents\tg_task\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\koshakqqq\Documents\tg_task\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\koshakqqq\Documents\tg_task\menu\menu_handlers.py", line 18, in menu_msg
+    status, res_message = get_menu_msg(message.chat.first_name)
+ValueError: too many values to unpack (expected 2)

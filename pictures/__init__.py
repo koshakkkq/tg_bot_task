@@ -1,0 +1,1 @@
+from pictures.picture_handlers import handler_register

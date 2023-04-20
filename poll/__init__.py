@@ -1,0 +1,1 @@
+from poll.poll_handlers import handler_register
